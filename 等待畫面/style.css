@@ -1,0 +1,61 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #2c3e50;
+}
+
+.middle{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box{
+    width: 8px;
+    height: 80px;
+    background: white;
+    display: inline-block;
+    transform-origin: bottom center;
+    animation: loading 1.5s ease-in-out infinite;
+}
+
+.box1{
+    animation-delay: 0.1s;
+}
+.box2{
+    animation-delay: 0.2s;
+}
+.box3{
+    animation-delay: 0.3s;
+}
+.box4{
+    animation-delay: 0.4s;
+}
+.box5{
+    animation-delay: 0.5s;
+}
+.box6{
+    animation-delay: 0.6s;
+}
+.box7{
+    animation-delay: 0.7s;
+}
+.box8{
+    animation-delay: 0.8s;
+}
+
+@keyframes loading{
+    0%{
+        background: white;
+        transform: scaleY(0.1);
+    }
+    50%{
+        background: #3498db;
+        transform: scaleY(1);
+    }
+    100%{
+        background: transparent;
+        transform: scaleY(0.1);
+    }
+} 
