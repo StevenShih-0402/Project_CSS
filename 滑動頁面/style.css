@@ -1,0 +1,104 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #1B9CFC;
+}
+
+.mainblock{
+    width: 700px;
+    height: 400px;
+    overflow: hidden;       /*超出長寬的文字與圖像處理方式*/
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);        /*以原本位置的中心點與元素長寬(margin)作為基準去移動 → 類似inDesign排版的感覺*/
+
+    box-shadow:#9AECDB 0 0 5px, #2C3A47 8px 8px 8px;
+    border-radius: 15px;
+}
+
+.roller{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    
+}
+
+.bar{
+    width: 50px;
+    height: 10px;
+    border: 2px solid white;
+    margin: 6px;
+    cursor: pointer;
+    transition: 0.2s;        /*要改變的項目 轉場時間 轉場速度變化 開始時間*/
+}
+
+.bar:hover{
+    background: white;
+}
+
+input[name="r"]{
+    position: absolute;     /*將input與bar對齊*/
+    visibility: hidden;     /*元素的可視狀態*/
+}
+
+.slides{
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+
+.slide{
+    width: 20%;
+    transition: 0.5s;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+
+#r1:checked ~ .s1{          /*利用margin去推動slides，原理如下*/
+    margin-left: 0;         /*|0%---img1---|20%---img2---|40%---img3---|60%---img4---|80%---img5---|100%*/
+}
+#r2:checked ~ .s1{          /*r2被選取時，s1套用此效果*/
+    margin-left: -20%;
+}
+#r3:checked ~ .s1{
+    margin-left: -40%;
+}
+#r4:checked ~ .s1{
+    margin-left: -60%;
+}
+#r5:checked ~ .s1{
+    margin-left: -80%;
+}
+
+h1{
+    z-index: -1;
+    position: absolute;
+    top:10%;
+    left:50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 48px;
+    font-family: "BoutiqueBitmap7x7", "Reggae One", "Comic Sans MS", "sans-serif", "微軟正黑體";
+    color:#182C61;
+    text-shadow: #3B3B98 3px 3px 3px;
+}
+
+h2{
+    position: absolute;
+    bottom:0%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+
+    font-size: 48px;
+    font-family: "BoutiqueBitmap7x7", "Reggae One", "Comic Sans MS", "sans-serif", "微軟正黑體";
+    color:#182C61;
+    text-shadow: #3B3B98 3px 3px 3px;
+}

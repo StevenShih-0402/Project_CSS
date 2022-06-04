@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "jf-openhuninn-1.1", "sans-serif";
+    list-style: none;
+    text-decoration: none;
+}
+
+.middle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu{
+    width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.select{
+    border-top: 1px solid #48dbfb;
+    overflow: hidden;
+}
+
+.btn{
+    display: block;
+    padding: 16px 20px;
+    background: #0abde3;
+    color: white;
+    position: relative;
+}
+
+.btn::before{               /*三角形的部分*/
+    content: "";
+    position: absolute;
+    left: 20px;
+    bottom: -7px;
+    width: 14px;
+    height: 14px;
+    background: #0abde3;
+    transform: rotate(45deg);
+}
+
+.btn i{
+    margin-right: 10px;
+}
+
+.smallmenu{
+    background: #222f3e;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    max-height: 0;                  /*控制伸縮的關鍵*/
+}
+
+.smallmenu a{
+    display: block;
+    padding: 16px 26px;
+    color: white;
+    font-size: 14px;
+    margin: 4px 0;
+    position: relative;
+}
+
+.smallmenu a::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 6px;
+    height: 100%;
+    background: #0abde3;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.smallmenu a:hover::before{
+    opacity: 1;
+}
+
+.select:target .smallmenu{
+    max-height: 10em;               
+}

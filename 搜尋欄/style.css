@@ -1,0 +1,57 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #e17055;
+}
+
+.search{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #2d3436;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+.btn{
+    color: #e17055;
+    float: right;           /*圍繞著元素，在右側浮動*/
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2d3436;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.text{
+    background: none;
+    border:none;
+    outline: none;
+    float:left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    line-height: 40px;
+    width: 0px;             /*頁面一開始呈現的情形*/
+    transition: 0.4s;
+}
+
+.search:hover > .text{
+    width: 240px;
+    padding: 0 6px;
+}
+
+h1{
+    font-size: 128px;
+    font-weight: 900;
+    font-family: "Taipei Sans TC Beta", "sans-serif";
+    display: flex;
+    justify-content: center;
+    transform:rotateY(180deg);
+}

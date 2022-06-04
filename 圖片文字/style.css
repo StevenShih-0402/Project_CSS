@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #95afc0;
+    font-family: "Taipei Sans TC Beta", "sans-serif";
+}
+h1{
+    font-size: 324px;
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    background: url("呵.jpg") 50%, 50%;     /*後面的數值是在調整圖片位置*/
+    background-size: cover;                 /*圖片的長寬比例，也可用兩個數值的方式調整，cover會盡量維持圖片的寬高比例去做縮放，容器與圖片大小不符時會進行裁減*/
+
+    -webkit-text-fill-color: transparent;   /*文字顏色：透明色彩(transparent視為一種顏色，可用在任何與color相關的元素)*/
+    -webkit-background-clip: text;          /*背景元素(圖片、顏色)的延伸：border-box→擴展到邊框 / padding-box→擴展到邊框前 / content-box→與邊框有一段距離 / text→作為文字背景色*/
+
+    /*-webkit-字首表示其在Google Chrome和Safari上能套用的效果，在其他瀏覽器上也會有另外的非負面效果*/
+}

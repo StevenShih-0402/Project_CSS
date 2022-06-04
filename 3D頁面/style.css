@@ -1,0 +1,81 @@
+*{              /*全域*/
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "Klee One", "sans-serif";
+}
+
+body{
+    background: #1e272e
+}
+
+.middle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card{
+    cursor: pointer;
+    width: 340px;
+    height: 480px;
+}
+
+.front, .back{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    backface-visibility:hidden;        /*可旋轉的元素其背面可視情形：不可視*/
+    position: absolute;
+    transition: transform .6s linear;
+}
+
+.front img{
+    width: 340px;
+    height: 480px;
+}
+
+.front{
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.back{
+    background: black;
+    transform: perspective(600px) rotateY(-180deg);
+}
+
+.back-content{
+    color:#0da8cf;
+    text-align: center;
+    width: 100%;
+}
+
+.icon{
+    margin: 20px 0;
+}
+
+.icon a{
+    display: inline-flex;       /*一個flex元素包覆著inline元素*/
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    color: #0da8cf;
+    font-size: 18px;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.icon a:hover{
+    background-color: #0da8cf;
+    color: black;
+}
+
+.card:hover > .front{                                   /* ">":底下第一層的所有同名元素 / "+":後方同層級的第一個元素 / "~":後方同層級的所有元素 */
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover > .back{
+    transform: perspective(600px) rotateY(0deg);
+}
