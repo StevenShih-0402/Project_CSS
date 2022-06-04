@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>質感，就是一種質感</title>
+    <link rel="stylesheet" href="glasscard.css">
+    <link rel="icon" types="image/png" href="D:\Javascript\HTML+CSS\sideproject\CSS作品彙整\LOGO.png">
+</head>
+<body>
+    <div class="container">
+
+        <div class="card">
+            <div class="content">
+                <h1>01</h1>
+                <h2>專題</h2>
+                <p>話雖如此，我們卻也不能夠這麼篤定。儘管如此，別人往往卻不這麼想。我們要從本質思考，從根本解決問題。專題究竟是怎麼樣的存在，始終是個謎題。</p>
+                <a href="#">Read more</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="content">
+                <h1>02</h1>
+                <h2>畢業</h2>
+                <p>赫茲里特講過，有虛榮心的人在不幸中建立功績，在恥辱中取得勝利。這段話非常有意思。這必定是個前衛大膽的想法。魯迅曾提出，言之無文，行而不遠。這段話令我陷入了沈思。畢業絕對是史無前例的。</p>
+                <a href="#">Read more</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="content">
+                <h1>03</h1>
+                <h2>工作</h2>
+                <p>工作對我來說，已經成為了我生活的一部分。不要先入為主覺得工作很複雜，實際上，工作可能比你想的還要更複雜。</p>
+                <a href="#">Read more</a>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="D:\Javascript\HTML+CSS\sideproject\CSS作品彙整\vanilla-tilt.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".card"), {
+            max: 25,
+            speed: 400,
+            glare: true,         // if it should have a "glare" effect
+            "max-glare": 1       // the maximum "glare" opacity (1 = 100%, 0.5 = 50%)
+        });
+    </script>
+</body>
+</html>

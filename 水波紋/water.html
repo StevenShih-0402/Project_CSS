@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lake Green Overdrive</title>
+    <link rel="stylesheet" href="water.css">
+    <link rel="icon" href="D:\Javascript\HTML+CSS\sideproject\CSS作品彙整\LOGO.png" type="image/png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>        <!--以JQuery載入框架Boostrap-->
+</head>
+<body>
+    <div class="slider"></div>
+
+    <script src="D:\Javascript\HTML+CSS\sideproject\CSS作品彙整\水波紋\jquery.ripples-master\dist\jquery.ripples-min.js"></script>  <!--JQuery的水波紋動畫套件-->
+    <script>
+        jQuery(document).ready(function(){
+            
+            "use strict"                
+
+            $('.slider').ripples({      
+                dropRadius: 12,          //移動與點擊時形成的水波大小
+                perturbance: 0.05,       //水波的折射量
+            });
+        });
+    </script>
+</body>
+</html>

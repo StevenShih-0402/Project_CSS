@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #eaeef0;
+}
+
+.scene{
+    width: 700px;
+    height: 500px;
+    position: relative;
+    
+    background: #eaeef0;
+    box-shadow: rgba(255, 255, 255, 0.9) -10px -10px 15px,
+                rgba(0,0,0,0.5) 8px 8px 25px;
+    
+    border-radius: 20px;
+    border: 1px solid white;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.sun{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    
+    width: 80px;
+    height: 80px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: #ffff5b 0 0 40px,
+                #ffff5b 0 0 60px,
+                #ffff5b 0 0 80px,
+                #ffff5b 0 0 100px
+}
+
+.road{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 120px;
+    background: #333;
+}
+.road::before{          /*grass*/
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    background: #0d9e0d;
+}
+.road::after{
+    content:"";
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 100%;
+    height: 2px;
+
+    background: repeating-linear-gradient(90deg, transparent 0, transparent 50%, white, 50%, white 100%);     /*重複的線性漸變(角度, 顏色1 位置1, 顏色2, 位置2, ...)*/
+    background-size: 40px;
+    animation: Road 0.2s linear infinite;
+}
+@keyframes Road{
+    0%{
+        background-position-x: 0px;
+    }
+    100%{
+        background-position-x: -40px;
+    }
+}
+
+.fa-shuttle-van{
+    position: absolute;
+    bottom: 60px;
+    left: 60px;
+
+    color: white;
+    -webkit-text-stroke: 2px black;
+    font-size: 7em;
+    z-index: 10;
+    animation: Dodododo 0.2s linear infinite;
+}
+@keyframes Dodododo{
+    0%, 100%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(2px);
+    }
+}
+
+.fa-cloud{
+    position: absolute;
+    top: calc(30px * var(--i));     /*calc可以讓CSS在設定參數時，允許一些計算過程，且可以在style設定變數後帶入計算*/
+    left: calc(30px * var(--i));
+    font-size: 5em;
+    color:white;
+    -webkit-text-stroke: 2px black;
+    z-index: 1;
+    animation: Shooe 3.5s linear infinite;
+    animation-delay: calc(-1s * var(--i));
+}
+@keyframes Shooe{
+    0%{
+        transform: translateX(700px);
+    }
+    100%{
+        transform: translateX(-700px);
+    }
+}
+
+.fa-tree{
+    position: absolute;
+    bottom: 120px;
+
+    font-size: 4em;
+    z-index: 2;
+    color: #0d9e0d;
+
+    animation: Shooe 7s linear infinite;
+    animation-delay: calc(-1s * var(--i));
+}
+
+.fa-mountain{
+    position: absolute;
+    bottom: 0;
+
+    font-size: 20em;
+    color: #8b3c23;
+
+    animation: Shooe 15s linear infinite;
+    animation-delay: calc(-3s * var(--i));
+}

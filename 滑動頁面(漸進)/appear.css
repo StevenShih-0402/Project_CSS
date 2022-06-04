@@ -1,0 +1,40 @@
+/*攝影師：Hristo Fidanov，連結：Pexels*/
+/*攝影師：KEHN HERMANO，連結：Pexels*/
+/*攝影師：Chait Goli，連結：Pexels*/
+/*攝影師：Mengliu Di，連結：Pexels*/
+
+body{
+    margin: 0;
+    padding: 0;
+    background: #273c75;
+}
+
+.slider{
+    width: 1200px;
+    height: 600px;
+    background: url(1.jpg) 50% 80%;
+    margin: 25px auto;
+    animation: slide 20s infinite;
+    background-size: cover;
+    box-shadow: #0e1e4b 10px 10px 10px,
+                #0e1e4b 0 0 2px;
+}
+
+@keyframes slide{
+    25%{
+        background: url(2.jpg) 50% 80%;
+        background-size: cover;
+    }
+    50%{
+        background: url(3.jpg) 50% 80%;
+        background-size: cover;
+    }
+    75%{
+        background: url(4.jpg) 50% 80%;
+        background-size: cover;
+    }
+    100%{
+        background: url(1.jpg) 50% 80%;
+        background-size: cover;
+    }
+}

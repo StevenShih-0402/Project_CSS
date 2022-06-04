@@ -1,0 +1,71 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+input[type="checkbox"]{
+    appearance: none;
+    visibility: hidden;     /*在不影響排版的情況下顯示或隱藏元素*/
+    display: none;
+}
+
+.check{
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 20px;
+    cursor: pointer;
+    background: #192a56;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: ease-in 0.5s;
+}
+
+input[type="checkbox"]:checked ~ .check{            /*:check 表示在checkbox被選取時套用的效果*/
+    background: white;
+    box-shadow: #192a56 0 0 0 1200px;
+}
+
+.check::before{
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background: white;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+/* input[type="checkbox"]:checked ~ .check::before{     左右滑動的效果
+    content: "";
+    top: 2px;
+    left: 22px;
+    background: #192a56;
+} */
+
+input[type="checkbox"]:checked ~ .check::before{
+    transform: translateX(-50px);
+}
+
+.check::after{
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background: #192a56;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transition: 0.5s;
+    transform: translateX(50px);
+}
+
+input[type="checkbox"]:checked ~ .check::after{
+    transform: translateX(0px);
+}

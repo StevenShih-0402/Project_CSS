@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Taipei Sans TC Beta", "sans-serif";
+    background: #2f3640;
+}
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+li{
+    list-style: none;
+    color: white;
+    font-size: 6em;
+    font-weight: 700;
+    letter-spacing: 10px;
+    filter: blur(1px);          /*模糊(數值越大效果越強)*/
+}
+
+ul:hover li{
+    animation: smoke 2s linear infinite;
+}
+
+ul li:nth-child(1){
+    animation-delay: 0s;
+}
+ul li:nth-child(2){
+    animation-delay: 0.4s;
+}
+ul li:nth-child(3){
+    animation-delay: 0.8s;
+}
+ul li:nth-child(4){
+    animation-delay: 1.2s;
+}
+ul li:nth-child(5){
+    animation-delay: 1.6s;
+}
+
+@keyframes smoke{
+    0%{
+        transform: rotate(0deg) translateY(0px);
+        opacity: 1;
+        filter: blur(1px);          /*用超強的模糊產生煙霧效果*/
+    }
+
+    100%{
+        transform: rotate(45deg) translateY(-200px);
+        opacity: 0;
+        filter: blur(20px);
+    }
+}

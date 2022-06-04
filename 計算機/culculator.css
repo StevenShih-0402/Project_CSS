@@ -1,0 +1,51 @@
+html{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #2bcbba, #3867d6);
+}
+input[type="button"]{
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    margin: 2px;
+    cursor: pointer;
+    border:1px solid #d1d8e0;
+    box-shadow: gray 0 0 5px, inset white 0 0 15px;
+    background: none;
+    text-shadow: gray 0 0 15px;
+}
+
+input[type="text"]{
+    width: 209px;
+    margin: 5px;
+    font-size: 25px;
+    padding: 5px;
+    background: none;
+    border:none;
+    outline: none;
+    box-shadow: white 0 0 10px;
+    color: white;
+}
+
+input[value="0"]{
+    width: 104px;
+}
+
+input[value="="]{
+    height: 104px;
+}
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.glass{
+    box-shadow: inset white 0 0 3em;
+    width: 320px;
+    height: 450px;
+    border-radius: 10%;
+}
+

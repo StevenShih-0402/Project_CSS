@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    background: url(bk.jpg) no-repeat center;    /*攝影師：Jimmy Chan，連結：Pexels*/
+    min-height: 100vh;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controlbox{
+    width: 400px;
+    height: 60px;
+    background: rgba(46, 134, 222, 0.6);
+    border-radius: 8px;
+    padding:0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.controlbox i{
+    padding: 0 10px;
+}
+
+#range{
+    width: 100%;
+    -webkit-appearance: none;       /*不套用任何特殊樣式，此處用來解除瀏覽器預設的樣式*/
+    background: #48dbfb;
+    height: 3px;
+    outline: none; 
+}
+
+#range::-webkit-slider-thumb{       /*range拖曳按鈕的偽元素*/
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #222f3e;
+    cursor: pointer;
+}
+
+.num{
+    font-family: "Klee One";
+    font-size: 1.5em;
+    margin: 10px;
+}

@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.broken{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.broken img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bang{
+    mix-blend-mode: multiply;       /*會與下層圖層的色彩進行混合，也可以透過像是difference(反轉)或hard-light(強光)等效果去做融合*/
+    filter: contrast(1.5);          /*圖片的對比度(IG修圖會調的那種)*/
+}

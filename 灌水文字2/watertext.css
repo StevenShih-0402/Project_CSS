@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Taipei Sans TC Beta", "sans-serif";
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+}
+
+.content{
+    position: relative;
+}
+
+h1{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: 15em;
+    color: white;
+}
+
+h1:nth-child(1){
+    color: transparent;
+    -webkit-text-stroke: 2px #1e90ff;       /*文字描邊框(寬度、顏色)*/
+}
+h1:nth-child(2){
+    color: #1e90ff;
+    animation: water 4s ease-in-out infinite;
+}
+
+@keyframes water{
+    0%, 100%{
+        clip-path: polygon(0 45%, 16% 44%, 32% 49%, 53% 61%, 70% 62%, 86% 59%, 100% 52%, 100% 100%, 0 100%);
+    }
+    50%{
+        clip-path: polygon(0 66%, 16% 69%, 33% 68%, 54% 60%, 69% 51%, 85% 45%, 100% 44%, 100% 100%, 0 100%);
+    }
+}

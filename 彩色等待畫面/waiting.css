@@ -1,0 +1,72 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #f1c40f;
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow:hidden;
+}
+
+.line{
+    border-radius: 50%;
+    border-left: 4px solid;
+    border-right: 4px solid;
+    border-top: 4px solid transparent !important;       /*優先級別*/
+    border-bottom: 4px solid transparent !important;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    animation: rowing 2s infinite;
+}
+
+.line1{
+    width: 120px;
+    height: 120px;
+    border-color: #3498db;
+}
+
+.line2{
+    width: 100px;
+    height: 100px;
+    border-color: #c0392b;
+
+    animation-delay: 0.2s;
+}
+
+.line3{
+    width: 80px;
+    height: 80px;
+    border-color: #27ae60;
+
+    animation-delay: 0.4s;
+}
+
+.line4{
+    width: 60px;
+    height: 60px;
+    border-color: #8e44ad;
+
+    animation-delay: 0.6s;
+}
+
+@keyframes rowing{
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    50%{
+        transform: translate(-50%, -50%) rotate(-180deg);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}

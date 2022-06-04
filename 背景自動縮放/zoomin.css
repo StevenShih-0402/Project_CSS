@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Taipei Sans TC Beta", "sans-serif";
+}
+
+.zoom-in{
+    width: 100%;
+    height: 100vh;
+    background: black;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.zoom-in::after{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(p1.jpg) no-repeat;      /*攝影師：Jean van der Meulen，連結：Pexels*/
+    background-size: cover;
+    opacity: 0.3;
+
+    animation: zoom 15s linear infinite;
+}
+
+@keyframes zoom{
+    50%{
+        transform: scale(2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.page{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.page h1{
+    font-size: 48px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+    color: #48dbfb;
+    letter-spacing: 2px;
+}
+
+.page p{
+    color:#c8d6e5;
+    margin: 0 0 20px 0;
+    line-height: 24px;
+}
+
+.page a{
+    display: inline-block;
+    text-decoration: none;
+    color: #48dbfb;
+    border:2px solid #48dbfb;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    transition: 0.4s linear;
+}
+
+.page a:hover{
+    color: black;
+    background: #48dbfb;
+}
+
+.text{
+    padding: 10px;
+    text-align: justify;
+}
+
+.text div{
+    margin: 0 0 10px 0;
+    line-height: 24px;
+}

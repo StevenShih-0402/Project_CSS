@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1+1=11</title>
+    <link rel="stylesheet" href="culculator.css">
+    <link rel="icon" type="image/png" href="D:\Javascript\HTML+CSS\sideproject\CSS作品彙整\LOGO.png">
+    <script src="culculator.js"></script>
+</head>
+<body>
+    <div class="glass center">
+        <div class="center">
+            <form name="form">
+                <input type="text" name="io" id="io">
+            </form>
+            
+            <table>
+                <tr>
+                    <td><input type="button" value="C" onclick="clean()"></td>
+                    <td><input type="button" value="<" onclick="back()"></td>
+                    <td><input type="button" value="/" onclick="insert('/')"></td>
+                    <td><input type="button" value="*" onclick="insert('*')"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="7" onclick="insert(7)"></td>
+                    <td><input type="button" value="8" onclick="insert(8)"></td>
+                    <td><input type="button" value="9" onclick="insert(9)"></td>
+                    <td><input type="button" value="-" onclick="insert('-')"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="4" onclick="insert(4)"></td>
+                    <td><input type="button" value="5" onclick="insert(5)"></td>
+                    <td><input type="button" value="6" onclick="insert(6)"></td>
+                    <td><input type="button" value="+" onclick="insert('+')"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="1" onclick="insert(1)"></td>
+                    <td><input type="button" value="2" onclick="insert(2)"></td>
+                    <td><input type="button" value="3" onclick="insert(3)"></td>
+                    <td rowspan="2"><input type="button" value="=" onclick="equal()"></td>      <!--可以橫跨的欄數-->
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="button" value="0" onclick="insert(0)"></td>    <!--可以橫跨的列數-->
+                    <td><input type="button" value="." onclick="insert('.')"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+</body>
+</html>

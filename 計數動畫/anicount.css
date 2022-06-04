@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "jf-openhuninn-1.1", "sans-serif";
+}
+
+.middle{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+.counting-sec{
+    padding: 40px 0;
+    width: 100%;
+    background: linear-gradient(90deg, #ffeaa7, #81ecec);
+}
+
+.inner-width{
+    max-width: 1200px;
+    display: flex;
+    margin: auto;
+}
+
+.col{
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    color: #636e72;
+    text-transform: uppercase;
+}
+
+.col i{
+    font-size: 40px;
+    color: black;
+}
+
+.num{
+    font-size: 40px;
+    margin: 20px 0;
+    color:#636e72
+}

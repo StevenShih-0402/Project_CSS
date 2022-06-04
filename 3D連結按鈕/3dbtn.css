@@ -1,0 +1,81 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+li{
+    position: relative;
+    list-style: none;
+    width: 120px;
+    height: 120px;
+    margin: 0 60px;
+    transform: rotate(-30deg) skew(25deg);      /*skew:二維平面上的傾斜轉換(X軸角度，Y軸角度)*/
+}
+
+span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: 0.5s;
+    font-size: 50px !important;
+}
+
+ul li:hover span{
+    box-shadow: rgba(0, 0, 0, .1) -1px 1px 1px;
+}
+
+li:nth-child(1) span{
+    background: #3b5999;
+}
+li:nth-child(2) span{
+    background: #E1306C;
+}
+li:nth-child(3) span{
+    background: #00B900;
+}
+li:nth-child(4) span{
+    background: #FF0000;
+}
+li:nth-child(5) span{
+    background: #F4B400;
+}
+
+ul li:hover span:nth-child(5){
+    transform: translate(60px, -60px);
+    opacity: 1;
+}
+ul li:hover span:nth-child(4){
+    transform: translate(45px, -45px);
+    opacity: .8;
+}
+ul li:hover span:nth-child(3){
+    transform: translate(30px, -30px);
+    opacity: .6;
+}
+ul li:hover span:nth-child(2){
+    transform: translate(15px, -15px);
+    opacity: .4;
+}
+ul li:hover span:nth-child(1){
+    transform: translate(0, 0);
+    opacity: .2;
+}
+

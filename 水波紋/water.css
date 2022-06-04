@@ -1,0 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.slider{
+    background: url(pexels-hristo-fidanov-1252869.jpg) 30%;     /*攝影師：Hristo Fidanov，連結：Pexels*/
+    background-size: cover;
+    height: 100vh;
+}

@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Taipei Sans TC Beta", "sans-serif";
+    box-sizing: border-box;         /*設定的寬高已包含border和padding*/
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #2d3436;
+}
+
+body::before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #81ecec, #0984e3);
+    clip-path: circle(30% at right 70%);        /*裁剪路徑: 區域內的部分顯示，區域外的隱藏 / circle(半徑 at 圓心位置 X座標 Y座標)*/
+}
+
+body::after{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #00b894, #ffeaa7);
+    clip-path: circle(20% at 10% 10%);        /*裁剪路徑: 區域內的部分顯示，區域外的隱藏 / circle(半徑 at 圓心位置 X座標 Y座標)*/
+}
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+.card{
+    position: relative;
+    width: 280px;
+    height: 400px;
+    margin: 30px;
+    box-shadow: rgba(0, 0, 0, 0.5) 20px 20px 50px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);                         /*讓一個元素背後的區域產生效果(模糊或顏色偏移)*/
+}
+
+.content{
+    padding: 20px;
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.card:hover .content{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+h1{
+    position: absolute;
+    top: 0px;
+    right: 30px;
+    font-size: 8em;
+    color: rgba(255, 255, 255, 0.1);
+    pointer-events: none;                   /*預設值為auto，如果改成none，滑鼠就能對穿越該元素，對其背後的元素進行動作*/
+}
+
+h2{
+    z-index: 1;
+    color: white;
+    font-size: 1.8em;
+    line-height: 2em;
+}
+
+p{
+    font-size: 1em;
+    color: white;
+    font-weight: 300;
+    line-height: 1.5em;
+}
+
+a{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin: 15px 0 0 0;
+    background: white;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 5px 15px;
+}

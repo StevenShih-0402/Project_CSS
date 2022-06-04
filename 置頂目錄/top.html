@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>這只是一個平凡的......</title>
+
+    <link rel="stylesheet" href="top.css">
+    <link rel="icon" href="D:\Javascript\HTML+CSS\sideproject\CSS作品彙整\LOGO.png" type="image/png">
+    <link rel="stylesheet" href="D:\Javascript\HTML+CSS\sideproject\CSS作品彙整\css\all.css">
+
+    <script src="D:\Javascript\HTML+CSS\sideproject\CSS作品彙整\jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>        <!--多用來表示標題區塊-->
+        <div class="top">
+            <a href="#" class="logo"><img src="饅頭.png" alt="無料饅頭"></a>
+            <i class="fas fa-bars bar"></i>
+
+            <nav class="menu">      <!--多用來表示目錄區塊-->
+                <a href="#"><i class="fas fa-home home"></i>HOME</a>
+                <a href="#"><i class="fas fa-align-left about"></i>ABOUT</a>
+                <a href="#"><i class="fas fa-briefcase works"></i>WORKS</a>
+                <a href="#"><i class="fas fa-user-friends team"></i>TEAM</a>
+                <a href="#"><i class="fas fa-address-card contact"></i>CONTACT</a>
+            </nav>
+        </div>
+    </header>
+
+    <script>
+        $('.bar').click(function(){
+            $(this).toggleClass('fa-times');           /*對選擇的元素進行切換 $('要執行動作的元素').toggleClass('要切換的元素')*/
+            $('.menu').toggleClass('active');
+        });
+    </script>
+</body>
+</html>

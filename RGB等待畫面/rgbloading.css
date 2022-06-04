@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    min-height: 100vh;
+}
+
+.loading{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, transparent, transparent 40%, #10ac84);
+
+    animation: cycle 2s linear infinite;
+}
+
+.loading::before{
+    content:"";
+    position: absolute;
+    top: 6px;
+    bottom: 6px;
+    left: 6px;
+    right: 6px;
+    background: black;
+    border-radius: 50%;
+    z-index: 1000;
+}
+
+.loading::after{
+    content:"";
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background: linear-gradient(45deg, transparent, transparent 40%, #10ac84);
+    border-radius: 50%;
+    z-index: 1;
+    filter: blur(30px);
+}
+
+@keyframes cycle{
+    0%{
+        transform: rotate(0deg);
+        filter: hue-rotate(0deg);       /*顏色偏移：hue是一種色相環，以漸層的方式在不同角度呈現不同顏色(關鍵!)*/
+    }
+    100%{
+        transform: rotate(360deg);
+        filter: hue-rotate(360deg);
+    }
+}
