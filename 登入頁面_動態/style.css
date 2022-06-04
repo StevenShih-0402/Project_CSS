@@ -1,0 +1,56 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background: #34495e;
+}
+
+.box{
+    width: 300px;
+    padding: 40px;
+    position: absolute;     /*放在瀏覽器特定位置，往下拉時會改變位置*/
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);       /*2D轉換(X軸，Y軸)*/
+    background: #191919;
+    text-align: center;
+    box-shadow: black 5px 5px 5px;
+}
+
+.box h1{
+    color:white;
+    font-weight: 500;
+    text-transform: uppercase;      /*字母大小寫：僅限大寫*/
+}
+
+.box input[type="text"], .box input[type="password"], .box input[type="submit"]{
+    display: block;
+    outline: none;
+    color:white;
+    border:0;
+    background: none;
+    text-align: center;
+    margin: 20px auto;
+    border:2px solid #2980b9;
+    padding: 14px 10px;
+    width: 200px;
+    border-radius: 24px;
+    transition: 0.8s;           /*(要變更的效果，轉場時間)*/
+}
+
+.box input[type="text"]:focus, .box input[type="password"]:focus{
+    width: 280px;
+    border-color: #2ecc71;
+    box-shadow: #2ecc71 0 0 10px;
+}
+
+.box input[type="submit"]{
+    width: 120px;
+    border-color:#2ecc71;
+    cursor: pointer;
+}
+
+.box input[type="submit"]:hover{
+    background: #2ecc71;
+    box-shadow: #2ecc71 0 0 15px;
+    color:black;
+}

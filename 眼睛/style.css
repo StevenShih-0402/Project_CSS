@@ -1,0 +1,52 @@
+html{
+    width: 100%;
+    height: 100%;
+    cursor: none;
+}
+body{
+    width: 100%;                /*滑鼠移動的關鍵，範圍不固定，它就很難去定位*/
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #2c3e50;
+}
+
+.eyes{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+.eye{
+    width: 240px;
+    height: 120px;
+    background: white;
+    display: inline-block;
+    margin: 40px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.ball{
+    width: 40px;
+    height: 40px;
+    background: #013115;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border:15px solid #1b7e44;
+}
+
+.mouse{
+    position: fixed;
+}
+
+.mouse img{
+    width: 40px;
+    height: 40px;
+}
